@@ -1,0 +1,90 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.zombie.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"attacking" : "query.variant != 2 && variable.attack_time >= 0.0"
+						}
+					]
+				},
+
+				"attacking" : {
+					"animations" : [ "attack.rotations" ],
+					"transitions" : [
+						{
+							"default" : "variable.attack_time < 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.zombie.tickle" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"tickling": "query.variant == 2 && variable.attack_time > 0.0"
+						}
+					]
+				},
+
+				"tickling": {
+					"animations": [
+						"tickle"
+					],
+					"transitions": [
+						{
+							"default" : "query.any_animation_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.zombie.attack_bare_hand" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"is_bare_hand" : "query.variant != 2 && variable.is_holding_left != 1.0"
+						}
+					]
+				},
+				"is_bare_hand" : {
+					"animations" : [ "zombie_attack_bare_hand" ],
+					"transitions" : [
+						{
+							"default" : "variable.is_holding_left == 1.0"
+						}
+					]
+				}
+			}
+		},
+
+		"controller.animation.zombie.swimming" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"is_swimming" : "variable.swim_amount > 0.0"
+						}
+					]
+				},
+				"is_swimming" : {
+					"animations" : [ "swimming" ],
+					"transitions" : [
+						{
+							"default" : "variable.swim_amount <= 0.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

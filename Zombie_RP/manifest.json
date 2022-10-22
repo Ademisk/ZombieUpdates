@@ -1,0 +1,18 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Zombie Updates!",
+		"description": "",
+		"uuid": "d4eedab0-be9b-44e8-9737-3750229bad67",
+		"version": [1,0,0],
+		"min_engine_version": [1,18,10]
+	},
+	"modules": [
+		{
+			"description": "Resources",
+			"uuid": "17a99135-2702-4bf0-867d-d6a6067b3148",
+			"type": "resources",
+			"version": [1,0,0]
+		}
+	]
+}

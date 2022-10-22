@@ -1,0 +1,19 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" : {
+	    "mob.zombie.trolling" : {
+	        "category": "hostile",
+	        "sounds": ["sounds/mob/zombie/hehhehheh"]
+	    },
+	    "mob.zombie.scratching" : {
+	        "category": "hostile",
+	        "sounds": [
+	        	{
+	        		"is3D": false,
+	        		"name": "sounds/mob/zombie/scratching",
+	        		"volume": 0.25
+	        	}
+	        ]
+	    }
+    }
+}

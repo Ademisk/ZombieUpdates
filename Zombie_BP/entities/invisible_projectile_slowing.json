@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "max:invisible_slowing_projectile",
+      "runtime_identifier": "minecraft:arrow",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 0,
+            "knockback": false
+          },
+          "remove_on_hit": {},
+          "mob_effect": {
+            "effect": "slowness",
+            "durationeasy": 30,   //The duration MUST be >20 for the difficulty being played, or else effect won't work
+            "durationnormal": 30,
+            "durationhard": 30,
+            "amplifier": 2
+          }
+        },
+
+        "power": 1.6,
+        "gravity": 0.00,
+        "inertia": 1,
+        "liquid_inertia": 1
+      },
+      "minecraft:physics": {
+        "has_collision": false
+      }
+    }
+  }
+}

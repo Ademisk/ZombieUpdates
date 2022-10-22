@@ -1,0 +1,24 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Zombie Updates",
+		"description": "Zombies rate this 'Ehhh...'",
+		"uuid": "d0267be3-e468-4ece-bbfc-4624c546db23",
+		"version": [ 1, 0, 0 ],
+		"min_engine_version": [ 1, 16, 0 ]
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [ 1, 0, 0 ],
+			"uuid": "0007b7ba-b9e6-4c7e-baff-63b524bbe48f",
+			"type": "data"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "d4eedab0-be9b-44e8-9737-3750229bad67",
+			"version": [1,0,0]
+		}
+	]
+}
